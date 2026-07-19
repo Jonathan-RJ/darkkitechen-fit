@@ -242,6 +242,7 @@
       "precio": 50,
       "nutricion": { "calorias": 52, "proteina": 10, "carbohidratos": 3, "grasas": 0 }
     },
+    
     {
       "id": "limonada-protein-plus",
       "nombre": "Limonada Protein Plus",
