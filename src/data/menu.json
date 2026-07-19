@@ -28,21 +28,49 @@
       "precioExtra": 10
     },
     "verdurasObligatorias": false,
-    "sazonado": ["Sal", "Ajo", "Sazonador universal", "Pimienta"],
-    "ingredientesPorDefecto": ["Tomate", "Cebolla", "Cilantro"],
-    "ingredientesOmitibles": ["Tomate", "Cebolla", "Cilantro"],
+    "sazonado": [
+      "Sal",
+      "Ajo",
+      "Sazonador universal",
+      "Pimienta"
+    ],
+    "ingredientesPorDefecto": [
+      "Tomate",
+      "Cebolla",
+      "Cilantro"
+    ],
+    "ingredientesOmitibles": [
+      "Tomate",
+      "Cebolla",
+      "Cilantro"
+    ],
     "ingredientesPreparacionNutricion": {
       "Tomate": {
         "porcion": "40 g",
-        "nutricion": { "calorias": 7, "proteina": 0.4, "carbohidratos": 1.6, "grasas": 0.1 }
+        "nutricion": {
+          "calorias": 7,
+          "proteina": 0.4,
+          "carbohidratos": 1.6,
+          "grasas": 0.1
+        }
       },
       "Cebolla": {
         "porcion": "25 g",
-        "nutricion": { "calorias": 10, "proteina": 0.3, "carbohidratos": 2.3, "grasas": 0 }
+        "nutricion": {
+          "calorias": 10,
+          "proteina": 0.3,
+          "carbohidratos": 2.3,
+          "grasas": 0
+        }
       },
       "Cilantro": {
         "porcion": "5 g",
-        "nutricion": { "calorias": 1, "proteina": 0.1, "carbohidratos": 0.2, "grasas": 0 }
+        "nutricion": {
+          "calorias": 1,
+          "proteina": 0.1,
+          "carbohidratos": 0.2,
+          "grasas": 0
+        }
       }
     },
     "notaNutricional": "Valores de ejemplo configurables. La informacion nutricional es estimada y puede variar ligeramente segun los ingredientes utilizados y el proceso de preparacion."
@@ -51,10 +79,11 @@
     {
       "id": "pollo",
       "nombre": "Pollo",
+      "imagen": "https://images.unsplash.com/photo-1772693471187-6e7d364f99ee?auto=format&fit=crop&w=900&q=70",
       "tipoPorcion": "gramos",
       "porcionBaseGramos": 150,
-      "precioBase": 95,
-      "precioExtraPorIncremento": 15,
+      "precioBase": 80,
+      "precioExtraPorIncremento": 18,
       "nutricionPor100Gramos": {
         "calorias": 156,
         "proteina": 31,
@@ -65,10 +94,11 @@
     {
       "id": "tilapia",
       "nombre": "Tilapia",
+      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=70",
       "tipoPorcion": "gramos",
       "porcionBaseGramos": 150,
-      "precioBase": 95,
-      "precioExtraPorIncremento": 17,
+      "precioBase": 85,
+      "precioExtraPorIncremento": 20,
       "nutricionPor100Gramos": {
         "calorias": 128,
         "proteina": 26,
@@ -79,10 +109,11 @@
     {
       "id": "carne-magra",
       "nombre": "Carne magra",
+      "imagen": "https://images.unsplash.com/photo-1746214093457-2305c2f8605e?auto=format&fit=crop&w=900&q=70",
       "tipoPorcion": "gramos",
       "porcionBaseGramos": 150,
-      "precioBase": 95,
-      "precioExtraPorIncremento": 22,
+      "precioBase": 105,
+      "precioExtraPorIncremento": 25,
       "nutricionPor100Gramos": {
         "calorias": 176,
         "proteina": 26,
@@ -93,11 +124,12 @@
     {
       "id": "huevos-duros",
       "nombre": "Huevos duros",
+      "imagen": "https://images.unsplash.com/photo-1635439811833-777cd1135214?auto=format&fit=crop&w=900&q=70",
       "tipoPorcion": "huevos",
       "huevosBase": 3,
       "maximoHuevos": 8,
-      "precioBase": 95,
-      "precioExtraPorHuevo": 12,
+      "precioBase": 75,
+      "precioExtraPorHuevo": 10,
       "nutricionPorClara": {
         "calorias": 17,
         "proteina": 3.6,
@@ -117,25 +149,40 @@
       "id": "arroz",
       "nombre": "Arroz",
       "ketoFriendly": false,
-      "precio": 20,
+      "precio": 15,
       "porcion": "120 g",
-      "nutricion": { "calorias": 156, "proteina": 3, "carbohidratos": 34, "grasas": 0.3 }
+      "nutricion": {
+        "calorias": 156,
+        "proteina": 3,
+        "carbohidratos": 34,
+        "grasas": 0.3
+      }
     },
     {
       "id": "tortillas",
       "nombre": "Tortillas",
       "ketoFriendly": false,
-      "precio": 18,
+      "precio": 12,
       "porcion": "3 piezas",
-      "nutricion": { "calorias": 165, "proteina": 4, "carbohidratos": 34, "grasas": 2 }
+      "nutricion": {
+        "calorias": 165,
+        "proteina": 4,
+        "carbohidratos": 34,
+        "grasas": 2
+      }
     },
     {
       "id": "arroz-tortillas",
       "nombre": "Arroz y tortillas",
       "ketoFriendly": false,
-      "precio": 38,
+      "precio": 25,
       "porcion": "120 g arroz + 3 tortillas",
-      "nutricion": { "calorias": 321, "proteina": 7, "carbohidratos": 68, "grasas": 2.3 }
+      "nutricion": {
+        "calorias": 321,
+        "proteina": 7,
+        "carbohidratos": 68,
+        "grasas": 2.3
+      }
     },
     {
       "id": "sin-carbohidrato",
@@ -143,48 +190,83 @@
       "ketoFriendly": true,
       "precio": 0,
       "porcion": "0 g",
-      "nutricion": { "calorias": 0, "proteina": 0, "carbohidratos": 0, "grasas": 0 }
+      "nutricion": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+      }
     }
   ],
   "verduras": [
     {
       "id": "pimientos",
       "nombre": "Pimientos",
-      "precio": 8,
-      "nutricion": { "calorias": 24, "proteina": 1, "carbohidratos": 5, "grasas": 0.2 }
+      "precio": 10,
+      "nutricion": {
+        "calorias": 24,
+        "proteina": 1,
+        "carbohidratos": 5,
+        "grasas": 0.2
+      }
     },
     {
       "id": "brocoli",
       "nombre": "Brocoli",
-      "precio": 8,
-      "nutricion": { "calorias": 35, "proteina": 2.4, "carbohidratos": 7, "grasas": 0.4 }
+      "precio": 10,
+      "nutricion": {
+        "calorias": 35,
+        "proteina": 2.4,
+        "carbohidratos": 7,
+        "grasas": 0.4
+      }
     },
     {
       "id": "calabaza",
       "nombre": "Calabaza",
       "precio": 8,
-      "nutricion": { "calorias": 20, "proteina": 1.2, "carbohidratos": 4, "grasas": 0.2 }
+      "nutricion": {
+        "calorias": 20,
+        "proteina": 1.2,
+        "carbohidratos": 4,
+        "grasas": 0.2
+      }
     }
   ],
   "grasas": [
     {
       "id": "aguacate",
       "nombre": "Aguacate",
-      "precio": 18,
-      "nutricion": { "calorias": 96, "proteina": 1.2, "carbohidratos": 5, "grasas": 8.8 }
+      "precio": 15,
+      "nutricion": {
+        "calorias": 96,
+        "proteina": 1.2,
+        "carbohidratos": 5,
+        "grasas": 8.8
+      }
     },
     {
       "id": "aceite-olivo",
       "nombre": "Cuchara de aceite extra virgen de olivo",
       "descripcion": "Se le pondra a la carne/proteina elegida.",
       "precio": 15,
-      "nutricion": { "calorias": 119, "proteina": 0, "carbohidratos": 0, "grasas": 13.5 }
+      "nutricion": {
+        "calorias": 119,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 13.5
+      }
     },
     {
       "id": "sin-grasa",
       "nombre": "Sin grasa adicional",
       "precio": 0,
-      "nutricion": { "calorias": 0, "proteina": 0, "carbohidratos": 0, "grasas": 0 }
+      "nutricion": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+      }
     }
   ],
   "ensaladas": [
@@ -192,70 +274,150 @@
       "id": "pepino",
       "nombre": "Pepino",
       "precio": 8,
-      "nutricion": { "calorias": 12, "proteina": 0.5, "carbohidratos": 3, "grasas": 0.1 }
+      "nutricion": {
+        "calorias": 12,
+        "proteina": 0.5,
+        "carbohidratos": 3,
+        "grasas": 0.1
+      }
     },
     {
       "id": "lechuga",
       "nombre": "Lechuga",
       "precio": 8,
-      "nutricion": { "calorias": 8, "proteina": 0.6, "carbohidratos": 1.5, "grasas": 0.1 }
+      "nutricion": {
+        "calorias": 8,
+        "proteina": 0.6,
+        "carbohidratos": 1.5,
+        "grasas": 0.1
+      }
     },
     {
       "id": "pepino-lechuga",
       "nombre": "Pepino con lechuga",
       "precio": 12,
-      "nutricion": { "calorias": 18, "proteina": 1, "carbohidratos": 4, "grasas": 0.2 }
+      "nutricion": {
+        "calorias": 18,
+        "proteina": 1,
+        "carbohidratos": 4,
+        "grasas": 0.2
+      }
     },
     {
       "id": "sin-ensalada",
       "nombre": "Sin ensalada",
       "precio": 0,
-      "nutricion": { "calorias": 0, "proteina": 0, "carbohidratos": 0, "grasas": 0 }
+      "nutricion": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+      }
     }
   ],
   "bebidas": [
     {
       "id": "coffee-protein",
       "nombre": "Coffee Protein",
-      "ingredientes": ["Leche Lala 100", "Cafe", "Stevia"],
+      "imagen": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Leche Lala 100",
+        "Cafe",
+        "Stevia"
+      ],
       "precio": 55,
-      "nutricion": { "calorias": 115, "proteina": 15, "carbohidratos": 8, "grasas": 2 }
+      "nutricion": {
+        "calorias": 115,
+        "proteina": 15,
+        "carbohidratos": 8,
+        "grasas": 2
+      }
     },
     {
       "id": "coffee-protein-ultra",
       "nombre": "Coffee Protein Ultra",
-      "ingredientes": ["Leche Lala 100", "Cafe", "Stevia", "+ 10 g de proteina extra sin carbohidratos"],
+      "imagen": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Leche Lala 100",
+        "Cafe",
+        "Stevia",
+        "+ 10 g de proteina extra sin carbohidratos"
+      ],
       "precio": 70,
-      "nutricion": { "calorias": 155, "proteina": 25, "carbohidratos": 8, "grasas": 2 }
+      "nutricion": {
+        "calorias": 155,
+        "proteina": 25,
+        "carbohidratos": 8,
+        "grasas": 2
+      }
     },
     {
       "id": "limonada-simple",
       "nombre": "Limonada simple",
-      "ingredientes": ["Limon", "Agua", "Stevia"],
-      "precio": 30,
-      "nutricion": { "calorias": 12, "proteina": 0, "carbohidratos": 3, "grasas": 0 }
+      "imagen": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Limon",
+        "Agua",
+        "Stevia"
+      ],
+      "precio": 25,
+      "nutricion": {
+        "calorias": 12,
+        "proteina": 0,
+        "carbohidratos": 3,
+        "grasas": 0
+      }
     },
     {
       "id": "limonada-protein",
       "nombre": "Limonada Protein",
-      "ingredientes": ["Limon", "Agua", "Stevia", "10 gramos de proteina sin carbohidratos"],
-      "precio": 50,
-      "nutricion": { "calorias": 52, "proteina": 10, "carbohidratos": 3, "grasas": 0 }
+      "imagen": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Limon",
+        "Agua",
+        "Stevia",
+        "10 gramos de proteina sin carbohidratos"
+      ],
+      "precio": 45,
+      "nutricion": {
+        "calorias": 52,
+        "proteina": 10,
+        "carbohidratos": 3,
+        "grasas": 0
+      }
     },
-    
     {
       "id": "limonada-protein-plus",
       "nombre": "Limonada Protein Plus",
-      "ingredientes": ["Limon", "Agua", "Stevia", "15 gramos de proteina sin carbohidratos"],
-      "precio": 60,
-      "nutricion": { "calorias": 72, "proteina": 15, "carbohidratos": 3, "grasas": 0 }
+      "imagen": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Limon",
+        "Agua",
+        "Stevia",
+        "15 gramos de proteina sin carbohidratos"
+      ],
+      "precio": 55,
+      "nutricion": {
+        "calorias": 72,
+        "proteina": 15,
+        "carbohidratos": 3,
+        "grasas": 0
+      }
     },
     {
       "id": "coca-zero",
       "nombre": "Coca-Cola Zero",
-      "ingredientes": ["Refresco sin azucar"],
-      "precio": 28,
-      "nutricion": { "calorias": 0, "proteina": 0, "carbohidratos": 0, "grasas": 0 }
+      "imagen": "https://images.unsplash.com/photo-1543253687-c931c8e01820?auto=format&fit=crop&w=900&q=70",
+      "ingredientes": [
+        "Refresco sin azucar"
+      ],
+      "precio": 25,
+      "nutricion": {
+        "calorias": 0,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+      }
     }
   ],
   "postres": [
@@ -263,22 +425,39 @@
       "id": "sandwich-fresas",
       "nombre": "Sandwich de fresas",
       "descripcion": "Dos rebanadas de pan de centeno rellenas de fresas, yogur griego y stevia.",
+      "imagen": "https://images.unsplash.com/photo-1768204037852-d7c969973750?auto=format&fit=crop&w=900&q=70",
       "precio": 70,
-      "nutricion": { "calorias": 255, "proteina": 17, "carbohidratos": 38, "grasas": 4 }
+      "nutricion": {
+        "calorias": 255,
+        "proteina": 17,
+        "carbohidratos": 38,
+        "grasas": 4
+      }
     },
     {
       "id": "fresas-yogur",
       "nombre": "Fresas con yogur",
       "descripcion": "Fresas con yogur griego y stevia.",
-      "precio": 58,
-      "nutricion": { "calorias": 180, "proteina": 16, "carbohidratos": 26, "grasas": 2 }
+      "imagen": "https://images.unsplash.com/photo-1768204037852-d7c969973750?auto=format&fit=crop&w=900&q=70",
+      "precio": 65,
+      "nutricion": {
+        "calorias": 180,
+        "proteina": 16,
+        "carbohidratos": 26,
+        "grasas": 2
+      }
     }
   ],
   "extraProteinaPostre": {
     "nombre": "Agregar 10 g de proteina",
     "proteinaGramos": 10,
     "precio": 30,
-    "nutricion": { "calorias": 42, "proteina": 10, "carbohidratos": 0, "grasas": 0 }
+    "nutricion": {
+      "calorias": 42,
+      "proteina": 10,
+      "carbohidratos": 0,
+      "grasas": 0
+    }
   },
   "preparacion": {
     "titulo": "Como preparamos las comidas",

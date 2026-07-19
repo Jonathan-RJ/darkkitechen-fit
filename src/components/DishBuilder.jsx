@@ -65,10 +65,15 @@ function ChoiceGroup({ title, options, value, onChange, disabledIds = [] }) {
               disabled={disabled}
               onClick={() => onChange(option.id)}
             >
-              <strong>{option.nombre}</strong>
-              {option.porcion && <span>{option.porcion}</span>}
-              {option.descripcion && <span>{option.descripcion}</span>}
-              {disabled && <small>No keto</small>}
+              {option.imagen && (
+                <img className="choice-image" src={option.imagen} alt={option.nombre} loading="lazy" />
+              )}
+              <span className="choice-copy">
+                <strong>{option.nombre}</strong>
+                {option.porcion && <span>{option.porcion}</span>}
+                {option.descripcion && <span>{option.descripcion}</span>}
+                {disabled && <small>No keto</small>}
+              </span>
             </button>
           );
         })}

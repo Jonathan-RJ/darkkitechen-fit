@@ -153,6 +153,7 @@ export const createSimpleCartItem = (type, product, quantity, extra = null) => {
     cantidad: quantity,
     productoId: product.id,
     nombre: extra ? `${product.nombre} + 10 g de proteina` : product.nombre,
+    imagen: product.imagen || "",
     ingredientes: product.ingredientes || [],
     descripcion: product.descripcion || "",
     configuracion: extra ? { extraProteina: true } : { extraProteina: false },

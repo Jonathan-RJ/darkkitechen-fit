@@ -20,6 +20,7 @@ export default function DrinksStep({ menu, cart, onSetSimpleQuantity, setCurrent
       <div className="catalog-grid">
         {menu.bebidas.map((drink) => (
           <article className="catalog-card" key={drink.id}>
+            {drink.imagen && <img className="catalog-image" src={drink.imagen} alt={drink.nombre} loading="lazy" />}
             <div>
               <h3>{drink.nombre}</h3>
               <p>{drink.ingredientes.join(", ")}</p>

@@ -25,6 +25,9 @@ export default function DessertsStep({ menu, cart, onSetSimpleQuantity, setCurre
       <div className="catalog-grid desserts">
         {menu.postres.map((dessert) => (
           <article className="catalog-card" key={dessert.id}>
+            {dessert.imagen && (
+              <img className="catalog-image" src={dessert.imagen} alt={dessert.nombre} loading="lazy" />
+            )}
             <div>
               <h3>{dessert.nombre}</h3>
               <p>{dessert.descripcion}</p>

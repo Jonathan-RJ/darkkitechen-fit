@@ -12,6 +12,34 @@ export default function CartPanel({
   compact = false
 }) {
   const totals = cartTotals(cart);
+  const hasDessert = cart.some((item) => item.tipo === "postre");
+  const hasProteinDrink = cart.some((item) => item.tipo === "bebida" && item.nutricion.proteina >= 20);
+  const featuredDessert = menu.postres[0];
+  const proteinDrink =
+    menu.bebidas.find((drink) => drink.id === "coffee-protein-ultra") ||
+    [...menu.bebidas].sort((a, b) => b.nutricion.proteina - a.nutricion.proteina)[0];
+  const suggestions = [
+    featuredDessert && !hasDessert
+      ? {
+          tone: "sweet",
+          eyebrow: "Antojo dulce",
+          title: "Oye, estaria increible algo dulce, no?",
+          text: `${featuredDessert.nombre}: ${featuredDessert.nutricion.proteina} g de proteina y cero drama.`,
+          action: "Ver postres",
+          step: 2
+        }
+      : null,
+    proteinDrink && totals.nutrition.proteina < 55 && !hasProteinDrink
+      ? {
+          tone: "protein",
+          eyebrow: "Subele proteina",
+          title: "Hey, si no llegaste a tus requerimientos...",
+          text: `Que tal un ${proteinDrink.nombre}? Te suma ${proteinDrink.nutricion.proteina} g de proteina.`,
+          action: "Ver bebidas",
+          step: 1
+        }
+      : null
+  ].filter(Boolean);
 
   return (
     <aside className={compact ? "cart-panel compact" : "cart-panel"}>
@@ -33,8 +61,17 @@ export default function CartPanel({
         <div className="cart-list">
           {cart.map((item) => {
             const dishLabel = item.tipo === "plato" ? getDishLabel(menu, item) : null;
+            const image = item.tipo === "plato" ? dishLabel.details.protein?.imagen : item.imagen;
             return (
               <article className="cart-item" key={item.idCarrito}>
+                {image && (
+                  <img
+                    className="cart-thumb"
+                    src={image}
+                    alt={item.tipo === "plato" ? dishLabel.title : item.nombre}
+                    loading="lazy"
+                  />
+                )}
                 <div>
                   <strong>{item.tipo === "plato" ? dishLabel.title : item.nombre}</strong>
                   <p>{item.tipo === "plato" ? dishLabel.subtitle : `Cantidad: ${item.cantidad}`}</p>
@@ -61,6 +98,23 @@ export default function CartPanel({
               </article>
             );
           })}
+        </div>
+      )}
+
+      {suggestions.length > 0 && (
+        <div className="side-ads" aria-label="Sugerencias para completar tu pedido">
+          {suggestions.map((suggestion) => (
+            <article className={`side-ad ${suggestion.tone}`} key={suggestion.eyebrow}>
+              <div>
+                <p className="eyebrow">{suggestion.eyebrow}</p>
+                <h3>{suggestion.title}</h3>
+                <p>{suggestion.text}</p>
+              </div>
+              <button type="button" className="link" onClick={() => setCurrentStep(suggestion.step)}>
+                {suggestion.action}
+              </button>
+            </article>
+          ))}
         </div>
       )}
 

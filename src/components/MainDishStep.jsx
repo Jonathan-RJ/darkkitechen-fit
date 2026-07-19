@@ -48,6 +48,14 @@ export default function MainDishStep({
             const label = getDishLabel(menu, dish);
             return (
               <article className="product-row" key={dish.idCarrito}>
+                {label.details.protein?.imagen && (
+                  <img
+                    className="product-image"
+                    src={label.details.protein.imagen}
+                    alt={label.details.protein.nombre}
+                    loading="lazy"
+                  />
+                )}
                 <div>
                   <p className="eyebrow">Plato {index + 1}</p>
                   <h3>{label.title} · {label.details.proteinTotals.label}</h3>
